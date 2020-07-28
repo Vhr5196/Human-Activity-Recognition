@@ -1,5 +1,7 @@
 # Human-Activity-Recognition
 
+Human Activity Recognition (HAR) is a process of classifying activity of a person using data received from Accelerometer and Gyroscope sensor of a smartphone that is affected from human movement.Classifying the physical activities performed by a user based on accelerometer and gyroscope sensor data collected by a smartphone in the user’s pocket. The activities to be classified are: Standing, Sitting, Stairsup, StairsDown, Walking and Cycling.
+
 ## Dataset link :
 https://archive.ics.uci.edu/ml/datasets/Heterogeneity+Activity+Recognition
 
