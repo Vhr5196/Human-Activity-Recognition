@@ -2,38 +2,26 @@
 
 Human Activity Recognition (HAR) is a process of classifying activity of a person using data received from Accelerometer and Gyroscope sensor of a smartphone that is affected from human movement.Classifying the physical activities performed by a user based on accelerometer and gyroscope sensor data collected by a smartphone in the user’s pocket. The activities to be classified are: Standing, Sitting, Stairsup, StairsDown, Walking and Cycling.
 
+## GOAL: 
+The goal is to understand in detail about the working of the various classifiers on Human Activity Recognition Dataset
+
+## Experiments:
+The experiments have been carried out with a group of 25 volunteers within age brackets 19-48 years. Each person performed six activities (SITTING, STANDING, LYING, WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS). The six activities as six classes corresponds to each data point with 551 features.
+
 ## Dataset link :
 https://archive.ics.uci.edu/ml/datasets/Heterogeneity+Activity+Recognition
 
 ## Libraries used :
 Keras, Scikit-Learn, Numpy, Matplotlib and Pandas
 
-## File Structure: 
+## Approaches used:
+The Approaches used are: Linear Discriminant Analyses (LDA); Multinomial Logistic Regression; Support Vector Machines (SVM) and kNN.
 
-There are 8 main files: 4 for data management, 4 for Machine learning codes and 1 for plotting the results.
+## Comparison:
+The comparison is performed based on the confusion matrix of those classification results on the test data using the different training classifiers, presented by confusion matrices.
 
-### Data management files: 
-1.As the dataset was very huge (~ 1.4 GB), it was partitioned into 13 files and the scripts 'compress_file.py' and 'compress2.0.py' were used to downsample the dataset stored in these 13 files to obtain 13 compressed files. 
-
-2.The scripts 'merge.py' and 'merge2.0.py' are used to merge the compressed files to obtain the dataset which was used for training. The 2.0 scripts were used for merging the accelerometer and gyroscope data.
-
-### Machine Learning codes: 
-1."main_NN.py" contains the Neural network implementation which was used on the accelerometer and gyroscope data separately. 
-
-2."main_RNN.py" contains the LSTM implementation which used on the merged data as well as the accelerometer and gyroscope data separately. 
-
-3."main.py" takes in the complete dataset (not the compressed dataset) and implements LSTM. 
-
-4."trainingPreprocessedData.py" takes in the dataset (Link:- https://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions) and outputs the result, this file was mainly created to see whether our LSTM model was good enough(The accuracy obtained from this preprocessed dataset was 91%).
-### Plotting:
-Used for plotting the results obtained from "main_NN.py".
-
-## Model:
-"model.h5" stores the final model to the problem.
-
-## NOTE:
-Final code is run by 'main.py' and for this the dataset must be in the same folder and run the script using python3  
-
+## Conclusion:
+SVM with linear kernel approach is the best fit classifier with an accuracy of 96.4% to our dataset. It gives the best performance for all the accuracies and error rates. SVM with linear kernel being a flexible approach which is capable to reduce overfitting.
 
 
 
